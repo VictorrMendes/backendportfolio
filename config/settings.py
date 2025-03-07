@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-@uy*^%%4*yk=nwo^ob(f$8k##lw#_-x!3+!ynp6j+kcrt4=cuj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["0ef0-45-178-250-206.ngrok-free.app", "localhost"]
+ALLOWED_HOSTS = ["dee5-45-178-250-148.ngrok-free.app", "localhost", "angry-pants-guess.loca.lt","yummy-taxes-ask.loca.lt"]
 
 
 
@@ -48,10 +48,12 @@ CORS_ALLOW_ALL_ORIGINS = False  # Desabilita permitir todas as origens
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5500",  # A URL do seu frontend
     "http://localhost:8000",  # Para desenvolvimento local
-    "http://0ef0-45-178-250-206.ngrok-free.app",  # URL do seu front-end via ngrok
+    "https://angry-pants-guess.loca.lt", # USE HTTPS!
+    "https://yummy-taxes-ask.loca.lt",
+    "https://dee5-45-178-250-148.ngrok-free.app",  # URL do seu front-end via ngrok
 ]
 
-
+CSRF_TRUSTED_ORIGINS = ['https://angry-pants-guess.loca.lt']  #  HTTPS!
 ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
