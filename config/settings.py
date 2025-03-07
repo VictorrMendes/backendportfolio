@@ -43,14 +43,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = False  # Desabilita permitir todas as origens
+# CORS_ALLOW_ALL_ORIGINS = False   Desabilita permitir todas as origens
 
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:5500",  # A URL do seu frontend
-    "http://localhost:8000",  # Para desenvolvimento local
-    "https://angry-pants-guess.loca.lt", # USE HTTPS!
+    "http://127.0.0.1:5500",  # A URL frontend
+    "http://localhost:8000",  # Desenvolvimento local
+    "https://angry-pants-guess.loca.lt", # HTTPS
     "https://yummy-taxes-ask.loca.lt",
-    "https://dee5-45-178-250-148.ngrok-free.app",  # URL do seu front-end via ngrok
+    "https://dee5-45-178-250-148.ngrok-free.app",  # URL front-end via ngrok
 ]
 
 CSRF_TRUSTED_ORIGINS = ['https://angry-pants-guess.loca.lt']  #  HTTPS!
