@@ -1,23 +1,24 @@
 from django.db import models
 
 class Projects(models.Model):
-    #titulo
+    # Título
     title = models.CharField(max_length=100, blank=True)
     
-    #link da imagem
-    projetc_img = models.ImageField(upload_to='projects/')  
-    
-    #ferramentas
+    # Imagem do projeto (armazena o caminho do arquivo)
+    projetc_img = models.ImageField(upload_to='projects/', blank=True, null=True)  
+        
+    # Ferramentas usadas
     tools = models.CharField(max_length=100, blank=True)
-    #Parte de trás
+    
+    # Parte de trás
     title_back = models.CharField(max_length=100, blank=True)
     
-    #descrição
+    # Descrição do projeto
     description = models.TextField()
     
-    #link do projeto
+    # Link do projeto
     link_project = models.CharField(max_length=255, blank=True)
     
 class Senha(models.Model):
-    #Senha
+    # Senha
     senha = models.CharField(max_length=10, blank=True)

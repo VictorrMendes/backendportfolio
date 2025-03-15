@@ -17,6 +17,14 @@ DEBUG = True
 ALLOWED_HOSTS = ["dee5-45-178-250-148.ngrok-free.app", "localhost", "puny-spiders-walk.loca.lt"]
 
 
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+        
+    ],
+}
+
 
 # Application definition
 
