@@ -16,6 +16,7 @@ class ProjectsViews(views.APIView):
             image_url = request.build_absolute_uri(project.projetc_img.url)
 
             projects_data.append({
+                "id": project.id,
                 "title": project.title,
                 "projetc_img": image_url,
                 "tools": project.tools,
