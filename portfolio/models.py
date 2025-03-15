@@ -18,3 +18,6 @@ class Projects(models.Model):
     #link do projeto
     link_project = models.CharField(max_length=255, blank=True)
     
+class Senha(models.Model):
+    #Senha
+    senha = models.CharField(max_length=10, blank=True)

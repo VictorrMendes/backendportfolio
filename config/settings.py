@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-@uy*^%%4*yk=nwo^ob(f$8k##lw#_-x!3+!ynp6j+kcrt4=cuj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["dee5-45-178-250-148.ngrok-free.app", "localhost", "angry-pants-guess.loca.lt","yummy-taxes-ask.loca.lt"]
+ALLOWED_HOSTS = ["dee5-45-178-250-148.ngrok-free.app", "localhost", "puny-spiders-walk.loca.lt"]
 
 
 
@@ -46,11 +46,12 @@ MIDDLEWARE = [
 # CORS_ALLOW_ALL_ORIGINS = False   Desabilita permitir todas as origens
 
 CORS_ALLOWED_ORIGINS = [
-    "http://127.0.0.1:5500",  # A URL frontend
-    "http://localhost:8000",  # Desenvolvimento local
-    "https://angry-pants-guess.loca.lt", # HTTPS
-    "https://yummy-taxes-ask.loca.lt",
-    "https://dee5-45-178-250-148.ngrok-free.app",  # URL front-end via ngrok
+    # local
+    "http://127.0.0.1:5500",  
+    "http://localhost:8000",  
+    # HTTPS 
+    "https://puny-spiders-walk.loca.lt", # URL localtunnel
+    "https://dee5-45-178-250-148.ngrok-free.app",  # URL  ngrok
 ]
 
 CSRF_TRUSTED_ORIGINS = ['https://angry-pants-guess.loca.lt']  #  HTTPS!
@@ -119,8 +120,8 @@ USE_TZ = True
 
 
 # Diretório onde os arquivos de mídia serão armazenados
-MEDIA_URL = '/media/'  # A URL pública para acessar os arquivos de mídia
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # O diretório físico onde os arquivos serão armazenados
+MEDIA_URL = '/media/' 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

@@ -1,6 +1,12 @@
-from rest_framework import views, response
-from portfolio.models import Projects
+from rest_framework import views, response, serializers
+from portfolio.models import Projects, Senha
 from django.conf import settings  
+
+
+class ProjectSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Projects
+        fields = ('id', 'title','description','projetc_img','tools','title_back','link_project',)
 
 class ProjectsViews(views.APIView):
     def get(self, request):
@@ -11,7 +17,7 @@ class ProjectsViews(views.APIView):
 
         projects_data = []
         for project in projects:
-            image_url = request.build_absolute_uri(project.projetc_img.url)
+            image_url = request.build_absolute_uri(project.projetc_img.url) if project.projetc_img else None
 
             projects_data.append({
                 "title": project.title,
@@ -23,3 +29,29 @@ class ProjectsViews(views.APIView):
             })
 
         return response.Response(projects_data)
+    
+
+    def post(self, request):
+        data = request.data
+        serializer = ProjectSerializer(data=data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return response.Response({"message": "projeto criado com sucesso"})
+
+
+    
+    
+class SenhaViews(views.APIView):
+    def get(self, request):
+        senha = Senha.objects.last()
+
+        if senha is None:
+            return response.Response({"message": "Nenhuma senha cadastrada"}, status=404)
+
+        senha_data = {
+                "senha": senha.senha,
+            }
+
+        return response.Response(senha_data)
+    
+
