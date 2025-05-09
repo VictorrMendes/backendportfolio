@@ -157,7 +157,7 @@ SECRET_KEY = 'django-insecure-@uy*^%%4*yk=nwo^ob(f$8k##lw#_-x!3+!ynp6j+kcrt4=cuj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://backendportfolio-alpha.vercel.app", "localhost", "honest-groups-tap.loca.lt"]
+ALLOWED_HOSTS = ["https://backendportfolio-alpha.vercel.app", "localhost", "victorrmendes.pythonanywhere.com"]
 
 
 REST_FRAMEWORK = {
@@ -202,11 +202,11 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  
     # HTTPS 
     "https://honest-groups-tap.loca.lt", # URL localtunnel
-    "https://dee5-45-178-250-148.ngrok-free.app",  # URL  ngrok
+    "https://victorrmendes.pythonanywhere.com",  # URL  
     "https://backendportfolio-alpha.vercel.app"
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://honest-groups-tap.loca.lt']  #  HTTPS!
+CSRF_TRUSTED_ORIGINS = ['https://victorrmendes.pythonanywhere.com']  #  HTTPS!
 ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
