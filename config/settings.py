@@ -17,6 +17,7 @@ ALLOWED_HOSTS = [
     "dee5-45-178-250-148.ngrok-free.app",
     "honest-groups-tap.loca.lt",
     "backendportfolio-alpha.vercel.app"
+    "portfolio-react-umber-zeta.vercel.app"
 ]
 
 # REST Framework
@@ -58,7 +59,8 @@ CORS_ALLOWED_ORIGINS = [
     "https://honest-groups-tap.loca.lt",
     "https://victorrmendes.pythonanywhere.com",
     "https://backendportfolio-alpha.vercel.app",
-    "https://dee5-45-178-250-148.ngrok-free.app"
+    "https://dee5-45-178-250-148.ngrok-free.app",
+    "https://portfolio-react-umber-zeta.vercel.app",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
