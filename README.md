@@ -2,6 +2,8 @@
 
 Este é o backend do meu portfólio, desenvolvido com **Python**, **Django** e **Django REST Framework**. Ele fornece uma API REST para gerenciar os projetos exibidos no app feito em React Native.
 
+Link do portfólio: https://portfolio-react-umber-zeta.vercel.app/
+
 ##  Funcionalidades
 
 -  **Listar projetos** (`GET`)
